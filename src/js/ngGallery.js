@@ -29,7 +29,7 @@
         var template_url = defaults.templateUrl;
         // Set the default template
         $templateCache.put(template_url,
-            '<div class="{{ baseClass }}">' +
+            '<div class="{{ baseClass }}" layout="row" layout-align="space-around center">' +
             '  <div ng-repeat="i in images">' +
             '    <img ng-src="{{ i.thumb }}" class="{{ thumbClass }}" ng-click="openGallery($index)" alt="Image {{ $index + 1 }}" />' +
             '  </div>' +
@@ -59,7 +59,7 @@
             scope: {
                 images: '=',
                 thumbsNum: '@',
-                hideOverflow: '='
+                hideOverflow: '=',
             },
             controller: [
                 '$scope',
